@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POS System Proposal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body { background-color: #f5f6fa; }
+
+    .header {
+      background: linear-gradient(135deg, #0d6efd, #4e8df7);
+      color: white;
+      padding: 60px 20px;
+      border-radius: 0 0 25px 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .lang-btn {
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 9999;
+      background: white;
+      border: 2px solid #0d6efd;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-weight: 600;
+      border-left: 4px solid #0d6efd;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    .price-box {
+      border: 1px solid #e0e0e0;
+      border-radius: 15px;
+      padding: 20px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    .price-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+
+<body>
+
+<button class="btn btn-light lang-btn" onclick="toggleLanguage()">සිංහල / English</button>
+
+<!-- Header -->
+<div class="header">
+  <h1 id="title" class="fw-bold">POS System Proposal</h1>
+  <p id="subtitle" class="lead">Customized system configuration and pricing prepared for: <strong>Mr.Suresh</strong></p>
+</div>
+
+<div class="container">
+
+  <!-- Customer Requirements -->
+  <div class="mb-4">
+    <h4 id="reqTitle" class="section-title">Customer Requirements</h4>
+    <ul id="reqList" class="list-group list-group-flush">
+      <li class="list-group-item" id="req1">• Billing System</li>
+      <li class="list-group-item" id="req2">• Stock Management</li>
+      <li class="list-group-item" id="req3">• Customer Loan & Credit Management</li>
+    </ul>
+  </div>
+
+  <!-- System Details -->
+  <div class="mb-4">
+    <h4 id="sysTitle" class="section-title">Proposed POS System Details</h4>
+    <div class="card shadow-sm">
+      <div class="card-body">
+
+        <h5 id="hardwareTitle" class="fw-bold mb-3">Hardware</h5>
+        <ul id="hardwareList">
+          <li id="hw1">80mm Thermal Printer</li>
+        </ul>
+
+        <h5 id="softwareTitle" class="fw-bold mt-4 mb-3">Software</h5>
+        <ul id="softwareList">
+          <li id="sw1">Billing & Invoicing System</li>
+          <li id="sw2">Stock / Inventory Management</li>
+          <li id="sw3">Customer Credit & Loan Tracking</li>
+          <li id="sw4">Reports Dashboard</li>
+          <li id="sw5">User Role Management</li>
+          <li id="sw6">Backups</li>
+          <li id="sw7"><strong>Lifetime Warranty</strong></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing -->
+  <div class="mb-4">
+    <h4 id="priceTitle" class="section-title">Pricing Breakdown</h4>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="price-box">
+          <h5 id="hardwareCostTitle" class="fw-bold">Hardware Cost</h5>
+          <p class="display-6">Rs. 12 500.00</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="price-box">
+          <h5 id="softwareCostTitle" class="fw-bold">Software Cost</h5>
+          <p class="display-6">Rs. 17 500.00</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="price-box">
+          <h5 id="totalCostTitle" class="fw-bold">Total Project Price</h5>
+          <p class="display-6 text-success">Rs. 30 000.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer text-center mb-5">
+    <p id="footer1">If you have any changes or additions, feel free to inform us.</p>
+    <p id="footer2" class="fw-bold">Thank you for choosing our service!</p>
+  </div>
+
+</div>
+
+<script>
+  const text = {
+    en: {
+      title: "POS System Proposal",
+      subtitle: "Customized system configuration and pricing prepared for: Mr.Suresh",
+      reqTitle: "Customer Requirements",
+      req1: "• Billing System",
+      req2: "• Stock Management",
+      req3: "• Customer Loan & Credit Management",
+
+      sysTitle: "Proposed POS System Details",
+
+      hardwareTitle: "Hardware",
+      hw1: "80mm Thermal Printer",
+
+      softwareTitle: "Software (Lifetime Warranty Included)",
+      sw1: "Billing & Invoicing System",
+      sw2: "Stock / Inventory Management",
+      sw3: "Customer Credit & Loan Tracking",
+      sw4: "Reports Dashboard",
+      sw5: "User Role Management",
+      sw6: "Backups",
+      sw7: "Lifetime Warranty",
+
+      priceTitle: "Pricing Breakdown",
+      hardwareCostTitle: "Hardware Cost",
+      softwareCostTitle: "Software Cost",
+      totalCostTitle: "Total Project Price",
+
+      footer1: "If you have any changes or additions, feel free to inform us.",
+      footer2: "Thank you for choosing our service!"
+    },
+
+    si: {
+      title: "POS පද්ධති යෝජනාව",
+      subtitle: "ඔබ සඳහා සකස් කළ POS පද්ධතියේ විස්තර සහ මිල ගණන්: Mr.Suresh",
+
+      reqTitle: "පාරිභෝගික අවශ්‍යතා",
+      req1: "• බිල්පත් නිකුත් කිරීම (Billing System)",
+      req2: "• තොග කළමනාකරණය (Stock Management)",
+      req3: "• පාරිභෝගික ණය හා ඇණවුම් කළමනාකරණය",
+
+      sysTitle: "යෝජිත POS පද්ධති විස්තර",
+
+      hardwareTitle: "හාර්ඩ්වෙයාර්",
+      hw1: "80mm තාප මුද්‍රණ යන්ත්‍රය (Thermal Printer)",
+
+      softwareTitle: "මෘදුකාංග (ජීවිත කාල වගකීම ඇතුළත්)",
+      sw1: "බිල්පත් හා ඉන්වොයිස් පද්ධතිය",
+      sw2: "තොග / ගබඩා කළමනාකරණය",
+      sw3: "පාරිභෝගික ණය හා වාරික කළමනාකරණය",
+      sw4: "වාර්තා පුවරුව (Reports Dashboard)",
+      sw5: "භූමිකා අනුව පරිශීලක කළමනාකරණය",
+      sw6: "ආරක්ෂිත පිටපත්",
+      sw7: "ජීවිත කාල වගකීම",
+
+      priceTitle: "මිල ගණන් විභජනය",
+      hardwareCostTitle: "හාර්ඩ්වෙයාර් වියදම්",
+      softwareCostTitle: "මෘදුකාංග වියදම්",
+      totalCostTitle: "මුළු ව්‍යාපෘති මිල",
+
+      footer1: "වෙනස්කම් හෝ එකතු කිරීම් ඇත්නම් අපට දන්වන්න.",
+      footer2: "අපගේ සේවාව තෝරා ගැනීම සඳහා ස්තූතියි!"
+    }
+  };
+
+  let current = "en";
+
+  function toggleLanguage() {
+    current = current === "en" ? "si" : "en";
+    const t = text[current];
+
+    for (const key in t) {
+      if (document.getElementById(key)) {
+        document.getElementById(key).innerHTML = t[key];
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
